@@ -1,0 +1,336 @@
+#banner,
+#banner .content,
+#information,
+#information .box,
+#information .info,
+#thesis .box,
+#thesis .info,
+#thesis .content,
+header,
+header .logo,
+footer {
+  display: flex;
+}
+
+header, header .logo {
+  align-items: center;
+  font-size: 16px;
+}
+
+header, footer {
+  height: 64px;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+h1, h2, h3, h4, h5, #banner .button {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  color: #333;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.2em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.8em;
+}
+
+h3 {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.2em;
+}
+
+h4 {
+  font-weight: 500;
+}
+
+h5 {
+  font-weight: 300;
+  font-size: .8em;
+  color: #777;
+}
+
+h6 {
+  padding-top: 32px;
+}
+
+p, a, h6, footer {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: .8em;
+  line-height: 1.7;
+  color: #777;
+}
+
+a {
+  text-decoration: none;
+}
+
+header img {
+  height: 32px;
+}
+
+.mobile {
+  display: none;
+}
+
+nav span, footer span {
+  padding-left: 16px;
+}
+
+main img, video {
+  max-width: 100%;
+}
+
+main a {
+  color: CornflowerBlue;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+header .logo span {
+  font-family: 'Hind', 'Arial', serif;
+  font-weight: 300;
+  color: #777;
+  letter-spacing: 0.1em;
+}
+
+#colmar {
+  font-weight: 600;
+  color: #000;
+}
+
+.title {
+  padding-top: 32px;
+  text-align: center;
+}
+
+#courses .presentation {
+  display: grid;
+}
+
+#banner,
+#information .guest,
+#courses,
+#thesis .side div:first-child {
+  background-color: #ddd;
+}
+
+#information, #thesis, footer {
+  background-color: #eee;
+}
+
+#banner, #information, #thesis .content {
+  padding: 32px 0 32px 24px;
+}
+
+#banner .image, .main {
+  width: 60%;
+  padding-right: 24px;
+}
+
+#banner .content, .side {
+  width: 40%;
+}
+
+#banner .content {
+  flex-direction: column;
+  justify-content: center;
+}
+
+#banner .content h3 {
+  padding: 24px 0;
+}
+
+#banner .content h3, #banner .content h1 {
+  padding-right: 24px;
+  padding-left: 16px;
+}
+
+#banner .button {
+  text-align: center;
+  width: 50%;
+  height: 32px;
+  line-height: 32px;
+  margin-left: 16px;
+  vertical-align: middle;
+  background-color: #555;
+  color: white;
+}
+
+.main h2 {
+  padding-top: 32px;
+  padding-bottom: 24px;
+}
+
+.box {
+  border: 1px solid lightgrey;
+  align-content: center;
+}
+
+#thesis .box {
+  border: none;
+}
+
+.box p, .info h5 {
+  padding: 8px 0;
+}
+
+.side .info p {
+  padding-right: 12px;
+}
+
+.box img {
+  max-width: 35%;
+  padding: 16px;
+}
+
+
+.info {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info h5 {
+  padding-top: 16px;
+}
+
+#courses .presentation {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 32px;
+  padding: 32px 72px;
+}
+
+#courses .presentation div {
+  /*border: 1px solid black;*/
+  background-color: white;
+}
+
+#courses .info {
+  padding: 16px;
+}
+
+#thesis .main h4 {
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+footer {
+  padding-top: 16px;
+}
+
+@media only screen and (max-width: 970px) and (min-width: 750px) {
+
+  p, a { line-height: normal; }
+  .box p { padding: 2px 0; }
+
+}
+
+@media only screen and (max-width: 750px) {
+
+  .mobile {
+    display: inline;
+  }
+
+  .logo span,
+  nav,
+  .nonmobile,
+  .course img,
+  .course h5,
+  .course p,
+  #information .main,
+  #thesis .side,
+  #thesis .main h4,
+  #thesis .main p,
+  footer .terms {
+    display: none;
+  }
+
+  #banner, #information .box {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #banner,
+  #banner .content,
+  #banner .image,
+  .side,
+  #thesis .main {
+    width: 100%;
+  }
+
+  #banner .image {
+    max-height: 330px;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  #banner .content {
+    padding: 32px 0;
+  }
+
+  #banner .button {
+    margin: 0;
+    font-size: .9em;
+    width: auto;
+    margin: 0 16px;
+    background-color: #aaa;
+  }
+
+  #banner .content h3, #banner .content h1 {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .box {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #information .guest, #courses {
+    background-color: #eee;
+  }
+
+  .box img {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  #information {
+    padding: 16px;
+  }
+
+  #information .info {
+    padding: 24px 16px;
+  }
+
+  #courses .presentation {
+    grid-template-columns: 1fr;
+    grid-gap: 8px;
+    padding: 16px;
+  }
+
+  #courses .presentation div {
+    background-color: #ccc;
+  }
+
+  #thesis .content {
+    padding: 16px 0;
+  }
+
+  #thesis .main {
+    padding-right: 0;
+  }
+
+  footer {
+    height: 44.8px;
+    padding-left: 16px;
+  }
+
+}
